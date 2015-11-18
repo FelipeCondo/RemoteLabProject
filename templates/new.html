@@ -1,0 +1,28 @@
+<html>
+<body>
+
+<h1>Nuevos coeficientes PID:</h1>
+
+<div class = 'pane'>
+<form action="{{ url_for('newPIDInputs')}}" method = 'post'>
+
+<dl>
+    <dt>kp:</dt>
+        <dd><input type = 'float' size='10' name='coefkp' required></dd>
+    <dt>ki:</dt>
+        <dd><input type = 'float' size='10' name='coefki' required></dd>
+    <dt>kd:</dt>
+        <dd><input type = 'float' size='10' name='coefkd' required></dd>
+    <dt>Setpoint:</dt>
+        <dd><input type = 'float' size='10' name='setpoint' required></dd>
+    <dt>Descripción (opcional):</dt>
+        <dd><textarea name = 'description' rows='4' cols='40'></textarea></dd>
+</dl>
+
+<input type='submit' value='Crear'>
+
+</form>
+</div>
+
+</body>
+</html>
