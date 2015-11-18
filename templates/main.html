@@ -1,0 +1,21 @@
+<html>
+
+<body>
+<div class = 'pane'>
+<h1>Coeficientes ingresados:</h1>
+
+<a href="{{url_for('newPIDInputs')}}"> <h3> Ingresar nuevos coeficientes </h3> </a>
+
+{% for i in app_inputs %}
+
+<b><p>ID = {{i.id}}</p></b>
+<p>Kp, Ki, Kd = {{i.kp}}, {{i.ki}}, {{i.kd}}</p>
+<p>Description: {{i.description}}</p>
+<p>Date created: {{i.added_date}}</p>
+</br>
+{% endfor %}
+
+</div>
+</body>
+
+</html>
